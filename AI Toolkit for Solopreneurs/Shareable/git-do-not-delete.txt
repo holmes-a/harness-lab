@@ -1,0 +1,1 @@
+This file keeps the Shareable folder tracked by git.

@@ -1,0 +1,20 @@
+{
+  "_comment": "Add this hooks block to your workspace's .claude/settings.json alongside any existing permissions. Use the Windows OR Mac/Linux command, not both. The hook itself needs no configuration — it derives your project's memory directory at runtime, so this block is identical on every machine and survives renaming or moving the workspace.",
+  "_paths": "Commands are relative to the workspace root, which is the working directory Claude Code runs hooks from. Keep them relative — an absolute path is the same trap as a hardcoded slug.",
+  "hooks": {
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "_windows": "powershell -ExecutionPolicy Bypass -File _system\\hooks\\pre-compact.ps1",
+            "_mac_linux": "bash _system/hooks/pre-compact.sh",
+            "command": "powershell -ExecutionPolicy Bypass -File _system\\hooks\\pre-compact.ps1",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

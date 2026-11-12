@@ -1,0 +1,19 @@
+{
+  "_comment": "Add this hooks block to your project's .claude/settings.json alongside any existing permissions. Use the Windows OR Mac/Linux command, not both.",
+  "hooks": {
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "_windows": "powershell -ExecutionPolicy Bypass -File hooks\\pre-compact.ps1",
+            "_mac_linux": "bash hooks/pre-compact.sh",
+            "command": "powershell -ExecutionPolicy Bypass -File hooks\\pre-compact.ps1",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

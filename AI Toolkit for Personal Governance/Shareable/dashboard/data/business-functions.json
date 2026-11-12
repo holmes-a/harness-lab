@@ -1,0 +1,8 @@
+[
+  { "key": "PM",        "label": "PM Office", "order": 1 },
+  { "key": "Work",      "label": "Work",      "order": 2 },
+  { "key": "Financial", "label": "Financial", "order": 3 },
+  { "key": "Family",    "label": "Family",    "order": 4 },
+  { "key": "Personal",  "label": "Personal",  "order": 5 },
+  { "key": "Health",    "label": "Health",    "order": 6 }
+]

@@ -1,0 +1,19 @@
+{
+  "_comment": "Merge this hooks block into your tool's settings file alongside any existing permissions. Use the Windows OR Mac/Linux command, not both. Hook event names and settings file format may vary by provider — this example is for Claude Code.",
+  "hooks": {
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "_windows": "powershell -ExecutionPolicy Bypass -File hooks\\pre-compact.ps1",
+            "_mac_linux": "bash hooks/pre-compact.sh",
+            "command": "powershell -ExecutionPolicy Bypass -File hooks\\pre-compact.ps1",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
